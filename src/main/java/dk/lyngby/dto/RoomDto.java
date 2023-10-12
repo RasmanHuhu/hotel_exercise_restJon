@@ -12,6 +12,7 @@ public class RoomDto {
     private Integer roomNumber;
     private Integer roomPrice;
     private Room.RoomType roomType;
+    private Integer squareMeters;
 
     public RoomDto(Room room) {
         this.roomNumber = room.getRoomNumber();

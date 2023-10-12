@@ -37,10 +37,15 @@ public class Room {
     @JoinColumn(name = "hotel_id", nullable = false)
     private Hotel hotel;
 
-    public Room(Integer roomNumber, BigDecimal roomPrice, RoomType roomType) {
+    @Setter
+    @Column(name = "square_meters", nullable = false)
+    private int squareMeters;
+
+    public Room(Integer roomNumber, BigDecimal roomPrice, RoomType roomType, int squareMeters) {
         this.roomNumber = roomNumber;
         this.roomPrice = roomPrice;
         this.roomType = roomType;
+        this.squareMeters = squareMeters;
     }
 
     @Override
